@@ -1,5 +1,8 @@
-# pandoc-latex
-The official pandoc/latex Dockerfile extended with custom fonts
+# mdtopdf
+
+Converting markdown to pdf via pandoc. 
+
+Based on the official pandoc/latex Dockerfile, extended with custom fonts.
 
 To build the docker image: 
 ```
