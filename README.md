@@ -5,12 +5,6 @@ Converting markdown to pdf via pandoc.
 Based on the official pandoc/latex Dockerfile, extended with the following typefaces:
 - IBM Plex 
 
-## How to build 
-
-```
-docker build -t mdtopdf . 
-```
-
 ## How to use
 
 Add the following lines to the beginning of your md file (modify as you will): 
@@ -35,7 +29,7 @@ pandoc --pdf-engine=xelatex --toc --number-sections -V geometry:margin=1in -o fi
 
 Run: 
 ```bash 
-docker run --volume "`pwd`:/data" --entrypoint "/data/script.sh" mdtopdf 
+docker run --volume "`pwd`:/data" --entrypoint "/data/script.sh" anastop/mdtopdf 
 ```
 
 and file.pdf will be generated. 
