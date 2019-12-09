@@ -21,15 +21,15 @@ Based on the official pandoc/latex Dockerfile, extended with the following typef
    ---
    ```
 
-2. Create `script.sh` with the following contents. Make it executable. Add it to the directory where 
-   the md file resides: 
-   
+2. Create `script.sh` with the following content (adapt to match your desired input md and output pdf files).    
    ```bash
    #!/bin/sh
    pandoc --pdf-engine=xelatex --toc --number-sections -V geometry:margin=1in -o file.pdf file.md
    ```
+   
+3. Make it executable, and add it to the directory where the md file resides.
 
-3. Run: 
+4. Run: 
    ```bash 
    docker run --volume "`pwd`:/data" --entrypoint "/data/script.sh" anastop/mdtopdf 
    ```
